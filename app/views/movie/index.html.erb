@@ -1,0 +1,33 @@
+<div class="main movie-index">
+  <div class="container">
+
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <th>評価</th>
+        <th>感想</th>
+      </tr>
+
+      <% @movies.each do |movie| %>
+      <tr class = "main_table" onclick= 'window.location=" <%= "/movie/#{movie.id}" %>"' role="link">
+        <td class="movie_artwork">  <%= movie.title %> </td>
+
+        <td>
+           <div class="evaluation">
+             <% i=0 %>
+             <% while i < movie.rating do %>
+             <div class="star">
+             <%='★' %>
+             </div>
+             <% i+=1 %>
+             <% end %>
+           </div>
+        </td>
+        <td><%= movie.feelings %></td>
+      </tr>
+      <% end %>
+
+    </table>
+    <a class="fas fa-plus plus" href="/movie/new"></a>
+  </div>
+</div>

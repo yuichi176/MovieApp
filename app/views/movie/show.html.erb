@@ -1,0 +1,35 @@
+<div class="main movie-show">
+  <div class="container">
+    <div class="movie-show-item">
+
+      <table>
+        <tr>
+          <th>タイトル</th>
+          <th>評価</th>
+          <th>感想</th>
+        </tr>
+        <tr>
+          <td class="movie_artwork">  <%= @movie.title %> </td>
+          <td>
+            <div class="evaluation">
+              <% i=0 %>
+              <% while i < @movie.rating do %>
+              <div class="star">
+              <%='★' %>
+              </div>
+              <% i+=1 %>
+              <% end %>
+            </div>
+          </td>
+          <td><%= @movie.feelings %></td>
+        </tr>
+      </table>
+
+      <div class="movie-menus">
+      <%= link_to("編集", "/movie/#{@movie.id}/edit") %>
+      <%= link_to("削除", "/movie/#{@movie.id}/destroy", {method: "post"}) %>
+      </div>
+
+    </div>
+  </div>
+</div>

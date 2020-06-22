@@ -1,0 +1,42 @@
+<div class="main movie-new">
+  <div class="container">
+    <h1 class="form-heading">映画の追加</h1>
+
+    <%= form_tag("/movie/create") do %>
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <th>評価</th>
+        <th>感想</th>
+      </tr>
+
+      <div class="form">
+        <div class="form-body">
+          <tr>
+            <td class="movie_artwork"> <textarea name="title"><%= @movie.title %></textarea>  </td>
+
+            <td>
+               <div class="evaluation">
+                    <input id="star1" type="radio" name="rating" value="5" />
+                    <label for="star1"><span class="text"></span>★</label>
+                    <input id="star2" type="radio" name="rating" value="4" />
+                    <label for="star2"><span class="text"></span>★</label>
+                    <input id="star3" type="radio" name="rating" value="3" />
+                    <label for="star3"><span class="text"></span>★</label>
+                    <input id="star4" type="radio" name="rating" value="2" />
+                    <label for="star4"><span class="text"></span>★</label>
+                    <input id="star5" type="radio" name="rating" value="1" />
+                    <label for="star5"><span class="text"></span>★</label>
+                </div>
+            </td>
+
+            <td> <textarea name="feelings"><%= @movie.feelings %></textarea> </td>
+          </tr>
+        </div>
+      </div>
+        </table>
+          <input type="submit" value="追加">
+          <% end %>
+
+        </div>
+      </div>

@@ -1,0 +1,157 @@
+// Place all the styles related to the movie controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* movie/index ================================ */
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+}
+
+.main_table:hover{
+  background-color: #d4f0fd;
+  cursor: pointer;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+table td.icon.bird{
+  background-image: url(icon-bird.png)
+}
+
+.plus{
+  float: right;
+  padding: 15px 30px;
+}
+
+/* movie/show ================================ */
+.movie-show form {
+  display: inline;
+}
+
+.movie-show-item {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+}
+
+.movie-show-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.movie-show-item .post-user-name a {
+  vertical-align: middle;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.movie-show-item p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.movie-time {
+  color: #8899a6;
+  margin-bottom: 10px;
+}
+
+
+.movie-show-item .fa {
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+.movie-menus {
+  float: right;
+}
+
+.movie-menus a, .movie-menus input {
+  color: #8899a6;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* movie/new ================================ */
+.movie-new textarea {
+  resize: none;
+}
+
+.movie-new textarea::-webkit-input-placeholder {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+.movie-new input{
+  float:right;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #3ecdc6;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.movie-new input:active{
+/*ボタンを押したとき*/
+-webkit-transform: translateY(4px);
+transform: translateY(4px);/*下に動く*/
+box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+border-bottom: none;
+}
+
+/* 評価ボタン（星） ================================ */
+.evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.evaluation input[type='radio']{
+  display: none;
+}
+.evaluation label{
+  position: relative;
+  color: gray;
+  cursor: pointer;
+  font-size: 20px;
+}
+.evaluation label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+.star{
+  color:#ffcc00;
+}

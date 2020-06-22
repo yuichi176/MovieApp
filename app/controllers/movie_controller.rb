@@ -1,0 +1,50 @@
+class MovieController < ApplicationController
+  def index
+    @movies = Movie.all.order(created_at: :desc)
+  end
+
+  def show
+    @movie = Movie.find_by(id: params[:id])
+  end
+
+  def edit
+    @movie = Movie.find_by(id: params[:id])
+  end
+
+  def update
+    @movie = Movie.find_by(id: params[:id])
+    @movie.title = params[:title]
+    @movie.rating = params[:rating]
+    @movie.feelings = params[:feelings]
+    if @movie.save
+      redirect_to("/movie/index")
+    else
+      render("movie/edit")
+    end
+  end
+
+  def destroy
+    @movie = Movie.find_by(id: params[:id])
+    @movie.destroy
+    flash[:notice] = "投稿を削除しました"
+    redirect_to("/movie/index")
+  end
+
+  def new
+    @movie = Movie.new
+  end
+
+  def create
+  @movie = Movie.new(
+  title: params[:title],
+  rating: params[:rating],
+  feelings: params[:feelings]
+)
+if @movie.save
+  redirect_to("/movie/index")
+else
+  render("movie/new")
+end
+  end
+
+end
