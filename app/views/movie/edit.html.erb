@@ -6,13 +6,27 @@
 <table>
   <tr>
     <th>タイトル</th>
+    <th>コメント</th>
     <th>評価</th>
-    <th>感想</th>
   </tr>
       <div class="form">
         <div class="form-body">
           <tr>
-            <td> <textarea name="title"><%= @movie.title %></textarea>  </td>
+
+            <td>
+              <div class="cp_iptxt">
+                <input class="ef" type="text" value="<%= @movie.title %>" name="title">
+                <span class="focus_line"></span>
+              </div>
+            </td>
+
+            <td>
+              <div class="cp_iptxt">
+                <input class="ef" type="text" value="<%= @movie.feelings %>" name="feelings">
+                <span class="focus_line"></span>
+              </div>
+            </td>
+
             <td>
               <div class="evaluation">
                    <input id="star1" type="radio" name="rating" value="5" />
@@ -27,13 +41,18 @@
                    <label for="star5"><span class="text"></span>★</label>
                </div>
             </td>
-            <td> <textarea name="feelings"><%= @movie.feelings %></textarea> </td>
           </tr>
         </div>
       </div>
         </table>
+        <div class="add_btn">
           <input type="submit" value="保存">
+        </div>
           <% end %>
 
+          <div class="back_btn">
+          <%= link_to("戻る", "/movie/index") %>
+          </div>
+          
         </div>
       </div>

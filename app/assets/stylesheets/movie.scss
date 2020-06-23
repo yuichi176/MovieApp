@@ -84,6 +84,7 @@ table td.icon.bird{
 
 .movie-menus {
   float: right;
+  padding-right: 10px;
 }
 
 .movie-menus a, .movie-menus input {
@@ -102,24 +103,57 @@ table td.icon.bird{
   opacity: 0.5;
 }
 
-.movie-new input{
-  float:right;
+/* 入力フォーム ================================ */
+.cp_iptxt {
+	position: relative;
+  width: 80%;
+	margin: 10px 10px 10px 20px;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+}
+.cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+.ef {
+	border: 0;
+	border-bottom: 1px solid #1b2538;
+	background-color: transparent;
+}
+.ef ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #3ecdc6;
+}
+.ef:focus ~ .focus_line,
+.cp_iptxt.ef ~ .focus_line {
+	width: 100%;
+	transition: 0.4s;
+}
+
+/* 追加ボタン ================================ */
+.add_btn input{
   display: inline-block;
-  padding: 0.5em 1em;
+  margin: 10px;
+  padding :5px 10px;
   text-decoration: none;
   background: #3ecdc6;/*ボタン色*/
   color: #FFF;
-  border-bottom: solid 4px #627295;
   border-radius: 3px;
-  margin: 10px;
+  float: right;
 }
 
-.movie-new input:active{
-/*ボタンを押したとき*/
--webkit-transform: translateY(4px);
-transform: translateY(4px);/*下に動く*/
-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-border-bottom: none;
+/* 戻るボタン ================================ */
+.back_btn{
+  color: #FFF;
+  padding :5px 10px;
 }
 
 /* 評価ボタン（星） ================================ */

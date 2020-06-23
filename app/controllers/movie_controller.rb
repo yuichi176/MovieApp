@@ -40,6 +40,12 @@ class MovieController < ApplicationController
   rating: params[:rating],
   feelings: params[:feelings]
 )
+#追加日時
+  require "date"
+  now = Date.today
+  add_date = "#{now.year}/#{now.month}/#{now.day}"
+  @movie.add_date = add_date
+
 if @movie.save
   redirect_to("/movie/index")
 else

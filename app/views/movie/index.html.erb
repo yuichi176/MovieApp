@@ -3,15 +3,17 @@
 
     <table>
       <tr>
+        <th>追加日</th>
         <th>タイトル</th>
+        <th>コメント</th>
         <th>評価</th>
-        <th>感想</th>
       </tr>
 
       <% @movies.each do |movie| %>
       <tr class = "main_table" onclick= 'window.location=" <%= "/movie/#{movie.id}" %>"' role="link">
-        <td class="movie_artwork">  <%= movie.title %> </td>
-
+        <td><%= movie.add_date %></td>
+        <td><%= movie.title %>   </td>
+        <td><%= movie.feelings %></td>
         <td>
            <div class="evaluation">
              <% i=0 %>
@@ -23,7 +25,7 @@
              <% end %>
            </div>
         </td>
-        <td><%= movie.feelings %></td>
+
       </tr>
       <% end %>
 
