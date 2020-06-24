@@ -41,7 +41,7 @@ form input[type="submit"] {
 /* 共通レイアウト ================================ */
 body {
   color: #2d3133;
-  background-color: #3ecdc6;
+  background-color: #fff5ee;
   margin: 0;
   min-height: 1vh;
 }
@@ -52,7 +52,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 100%;
-  background-color: #f5f8fa;
+  background-color: #fff5ee;
 }
 
 .container {
@@ -65,42 +65,49 @@ body {
 
 /* ヘッダー ================================ */
 header {
-  height: 64px;
+  height: 70px;
   position: absolute;
   z-index: 1;
   width: 100%;
+  background-color: white;
+  border-bottom: solid 1px #dcdcdc;
 }
 
 .header-logo {
   float: left;
-  padding-left: 20px;
-  color: white;
+  padding-left: 200px;
+  color: #000000;
   font-size: 22px;
   line-height: 64px;
 }
 
 .header-logo a{
-  color: white;
+  color: #000000;
   font-size: 22px;
 }
 
 .header-menus {
   float: right;
-  padding-right: 20px;
+  padding-right: 200px;
 }
 
 .header-menus li {
   float: left;
   line-height: 64px;
   font-size: 13px;
-  color: white;
+  color: #808080;
   padding-left: 15px;
 }
 
 .header-menus a {
   float: left;
   font-size: 13px;
-  color: white;
+  color: #808080;
+}
+
+.header-menus a:hover{
+  color: #000000;
+  cursor: pointer;
 }
 
 .header-menus .fa {
@@ -111,7 +118,7 @@ header {
   padding: 0 20px;
   float: left;
   line-height: 64px;
-  color: white;
+  color: #000000;
   margin: 0;
   font-size: 13px;
 }
@@ -130,11 +137,12 @@ header {
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
-  background-image: url("/top.jpg");
+  background-image: url("/top2.jpg");
 }
 
 .top-message {
   position: relative;
+  padding-top: 90px;
 }
 
 .top-main h2 {
