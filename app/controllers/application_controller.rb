@@ -15,7 +15,7 @@ before_action :set_current_user
   def forbid_login_user
   if @current_user
     flash[:notice] = "すでにログインしています"
-    redirect_to("/movie/index")
+    redirect_to("/movie/#{@current_user.id}/index")
   end
 end
 

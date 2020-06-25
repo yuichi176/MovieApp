@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MovieApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://kit.fontawesome.com/b81fef63b9.js" crossorigin="anonymous"></script>
-  </head>
+ <head>
+   <title>MovieApp</title>
+   <%= csrf_meta_tags %>
+   <%= csp_meta_tag %>
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <script src="https://kit.fontawesome.com/b81fef63b9.js" crossorigin="anonymous"></script>
+ </head>
 
-  <body>
-    <header>
-      <div class="header-content">
-        <div class="header-logo">
-          <% if @current_user %>
-            <%= link_to("MovieApp", "/movie/index") %>
-          <% else %>
-            <%= link_to("MovieApp", "/") %>
-          <% end %>
-      </div>
-    <ul class="header-menus">
-    <% if @current_user %>
+ <body>
+   <header>
+     <div class="header-content">
+       <div class="header-logo">
+         <% if @current_user %>
+           <%= link_to("MovieApp", "/movie/#{@current_user.id}/index") %>
+         <% else %>
+           <%= link_to("MovieApp", "/") %>
+         <% end %>
+     </div>
+   <ul class="header-menus">
+   <% if @current_user %>
       <li>
         <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
       </li>
       <li>
-        <%= link_to("Top", "/movie/index") %>
+        <%= link_to("Top", "/movie/#{@current_user.id}/index") %>
       </li>
-      <li>
-        <%= link_to("ユーザ一覧", "/users/index") %>
-      </li>
+    <!--  <li>
+        </%= link_to("ユーザ一覧", "/users/index") %>
+      </li> -->
       <li>
         <%= link_to("ログアウト", "/logout", method: :post) %>
       </li>
     <% else %>
-      <li>
-        <%= link_to("Top", "/movie/index") %>
-      </li>
       <li>
         <%= link_to("新規登録", "/signup") %>
       </li>

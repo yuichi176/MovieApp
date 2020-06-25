@@ -3,7 +3,7 @@ class MovieController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit,:update,:destroy]}
 
   def index
-    @movies = Movie.all.order(created_at: :desc)
+    @movies = @current_user.movies
   end
 
   def show
@@ -22,7 +22,7 @@ class MovieController < ApplicationController
     @movie.feelings = params[:feelings]
     if @movie.save
       flash[:notice] = "編集しました"
-      redirect_to("/movie/index")
+      redirect_to("/movie/#{@current_user.id}/index")
     else
       render("movie/edit")
     end
@@ -32,7 +32,7 @@ class MovieController < ApplicationController
     @movie = Movie.find_by(id: params[:id])
     @movie.destroy
     flash[:notice] = "削除しました"
-    redirect_to("/movie/index")
+    redirect_to("/movie/#{@current_user.id}/index")
   end
 
   def new
@@ -54,7 +54,7 @@ class MovieController < ApplicationController
 
     if @movie.save
       flash[:notice] = "追加しました"
-      redirect_to("/movie/index")
+      redirect_to("/movie/#{@current_user.id}/index")
     else
       render("movie/new")
     end
@@ -64,7 +64,7 @@ class MovieController < ApplicationController
     @post = Movie.find_by(id: params[:id])
     if @post.user_id != @current_user.id
       flash[:notice] = "権限がありません"
-      redirect_to("/posts/index")
+      redirect_to("/movie/#{@current_user.id}/index")
     end
   end
 
