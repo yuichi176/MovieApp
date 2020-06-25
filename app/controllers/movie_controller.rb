@@ -1,5 +1,6 @@
 class MovieController < ApplicationController
   before_action :authenticate_user
+  before_action :ensure_correct_user, {only: [:edit,:update,:destroy]}
 
   def index
     @movies = Movie.all.order(created_at: :desc)
@@ -7,6 +8,7 @@ class MovieController < ApplicationController
 
   def show
     @movie = Movie.find_by(id: params[:id])
+    @user = @movie.user
   end
 
   def edit
@@ -38,23 +40,32 @@ class MovieController < ApplicationController
   end
 
   def create
-  @movie = Movie.new(
-  title: params[:title],
-  rating: params[:rating],
-  feelings: params[:feelings]
-)
-#追加日時
-  require "date"
-  now = Date.today
-  add_date = "#{now.year}/#{now.month}/#{now.day}"
-  @movie.add_date = add_date
+    @movie = Movie.new(
+    title: params[:title],
+    rating: params[:rating],
+    feelings: params[:feelings],
+    user_id: @current_user.id
+  )
+    #追加日時
+    require "date"
+    now = Date.today
+    add_date = "#{now.year}/#{now.month}/#{now.day}"
+    @movie.add_date = add_date
 
-if @movie.save
-  flash[:notice] = "追加しました"
-  redirect_to("/movie/index")
-else
-  render("movie/new")
-end
+    if @movie.save
+      flash[:notice] = "追加しました"
+      redirect_to("/movie/index")
+    else
+      render("movie/new")
+    end
+  end
+
+  def ensure_correct_user
+    @post = Movie.find_by(id: params[:id])
+    if @post.user_id != @current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to("/posts/index")
+    end
   end
 
 end

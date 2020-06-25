@@ -7,7 +7,33 @@
       <% if @user.id == @current_user.id %>
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
       <% end %>
-      
+
+      <% @user.movies.each do |movie| %>
+        <table>
+          <tr>
+            <th>追加日</th>
+            <th>タイトル</th>
+            <th>コメント</th>
+            <th>評価</th>
+          </tr>
+          <tr>
+            <td><%= movie.add_date %></td>
+            <td><%= movie.title %> </td>
+            <td><%= movie.feelings %></td>
+            <td>
+              <div class="evaluation">
+                <% i=0 %>
+                <% while i < movie.rating do %>
+                <div class="star">
+                  <%='★' %>
+                </div>
+                <% i+=1 %>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        </table>
+      <% end %>
     </div>
   </div>
 </div>
