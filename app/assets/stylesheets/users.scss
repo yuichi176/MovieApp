@@ -1,0 +1,117 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* users/index ================================ */
+.users-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: #000000;
+}
+
+/* users/show ================================ */
+.user-show {
+  text-align: center;
+  padding-top:80px;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+.user h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.user p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* users/new ================================ */
+.users-form input {
+  margin-bottom: 15px;
+}
+
+/* users/login_form ================================ */
+.loginform-heading{
+  font-weight: 300;
+  margin: 60px 0 0;
+  font-size: 48px;
+  color: #000000;
+}
+
+.loginform-body {
+  padding: 20px;
+}
+
+.loginform-body p{
+ padding: 30px 0px 0px 0px;
+}
+
+.loginform input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.loginform input[type="submit"] {
+  background-color: #3ecdc6;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+  margin: 20px 0 0 0;
+}
+
+/* users/login_form ================================ */
+.new_userform-heading{
+  font-weight: 300;
+  margin: 60px 0 0;
+  font-size: 48px;
+  color: #000000;
+}
+
+.new_userform-body {
+  padding: 20px;
+}
+
+.new_userform-body p{
+ padding: 30px 0px 0px 0px;
+}
+
+.new_userform input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.new_userform input[type="submit"] {
+  background-color: #3ecdc6;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+  margin: 20px 0 0 0;
+}

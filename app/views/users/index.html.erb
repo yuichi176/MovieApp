@@ -1,0 +1,22 @@
+<div class="main user-index">
+  <div class="container">
+    <h1 class="users-heading">ユーザー一覧</h1>
+    <table>
+      <tr>
+        <th>ユーザ名</th>
+        <th>email</th>
+        <th>パスワード</th>
+      </tr>
+
+      <% @users.each do |user| %>
+      <tr class = "main_table" onclick= 'window.location=" <%= "/users/#{user.id}" %>"'>
+        <td><%= user.name %> </td>
+        <td><%= user.email %> </td>
+        <td><%= user.password %></td>
+      </tr>
+      <% end %>
+
+    </table>
+
+  </div>
+</div>

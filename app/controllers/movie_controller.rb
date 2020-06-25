@@ -1,4 +1,6 @@
 class MovieController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @movies = Movie.all.order(created_at: :desc)
   end
@@ -17,6 +19,7 @@ class MovieController < ApplicationController
     @movie.rating = params[:rating]
     @movie.feelings = params[:feelings]
     if @movie.save
+      flash[:notice] = "編集しました"
       redirect_to("/movie/index")
     else
       render("movie/edit")
@@ -26,7 +29,7 @@ class MovieController < ApplicationController
   def destroy
     @movie = Movie.find_by(id: params[:id])
     @movie.destroy
-    flash[:notice] = "投稿を削除しました"
+    flash[:notice] = "削除しました"
     redirect_to("/movie/index")
   end
 
@@ -47,6 +50,7 @@ class MovieController < ApplicationController
   @movie.add_date = add_date
 
 if @movie.save
+  flash[:notice] = "追加しました"
   redirect_to("/movie/index")
 else
   render("movie/new")

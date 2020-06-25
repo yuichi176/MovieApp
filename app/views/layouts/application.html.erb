@@ -13,44 +13,48 @@
     <header>
       <div class="header-content">
         <div class="header-logo">
-  <!--   </% if @current_user %>
-      </%= link_to("TweetApp", "/posts/index") %>
-    </% else %>
-      </%= link_to("TweetApp", "/") %>
-    </% end %> -->
-        <%= link_to("MovieApp", "/") %>
+          <% if @current_user %>
+            <%= link_to("MovieApp", "/movie/index") %>
+          <% else %>
+            <%= link_to("MovieApp", "/") %>
+          <% end %>
       </div>
     <ul class="header-menus">
-<!--     </% if @current_user %>
-     <li>
-        </%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+    <% if @current_user %>
+      <li>
+        <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
       </li>
       <li>
-        </%= link_to("投稿一覧", "/posts/index") %>
+        <%= link_to("Top", "/movie/index") %>
       </li>
       <li>
-        </%= link_to("新規投稿", "/posts/new") %>
+        <%= link_to("ユーザ一覧", "/users/index") %>
       </li>
       <li>
-        </%= link_to("ユーザー一覧", "/users/index") %>
+        <%= link_to("ログアウト", "/logout", method: :post) %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to("Top", "/movie/index") %>
       </li>
       <li>
-        </%= link_to("ログアウト", "/logout", {method: :post}) %>
-      </li>
-    </% else %> -->
-    <li>
-      <%= link_to("Top", "/movie/index") %>
-    </li>
-      <li>
-        <%= link_to("新規登録", "") %>
+        <%= link_to("新規登録", "/signup") %>
       </li>
       <li>
-        <%= link_to("ログイン", "") %>
+        <%= link_to("ログイン", "/login") %>
       </li>
-    </% end %>
+    <% end %>
+
     </ul>
   </div>
 </header>
+
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
     <%= yield %>
   </body>
 </html>
