@@ -21,11 +21,21 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password]
     )
+
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
       session[:user_id]=@user.id
       redirect_to("/users/#{@user.id}")
     else
+      if(@user.name=="")
+        @noname="ユーザ名を入力してください"
+      end
+      if(@user.email=="")
+        @noemail="メールアドレスを入力してください"
+      end
+      if(@user.password=="")
+        @nopassword="パスワードを入力してください"
+      end
       render("users/new")
     end
   end

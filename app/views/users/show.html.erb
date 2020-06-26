@@ -5,7 +5,7 @@
       <p><%=@user.email %></p>
 
       <% if @user.id == @current_user.id %>
-        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <div class="edit_btn">  <%= link_to("編集", "/users/#{@user.id}/edit") %> </div>
       <% end %>
 
         <table>
@@ -15,7 +15,7 @@
             <th>コメント</th>
             <th>評価</th>
           </tr>
-          
+
         <% @user.movies.each do |movie| %>
           <tr>
             <td><%= movie.add_date %></td>

@@ -1,26 +1,24 @@
 <div class="main users-new">
   <div class="container">
+    <div class="new_userform-box">
     <div class="new_userform-heading">新規ユーザー登録</div>
     <div class="new_userform">
       <div class="new_userform-body">
-
-        <!--</% @user.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            </%= message %>
-          </div>
-        </% end %> -->
-
         <%= form_tag("/users/create") do %>
           <p>ユーザー名</p>
-          <input name="name" value="<%= @user.name %>">
+        <div class = "new_userform-input">  <input name="name" value="<%= @user.name %>"> </div>
+      <div class="new_userform-error">  <%if @noname %> <%=@noname%> <% end %> </div>
           <p>メールアドレス</p>
-          <input name="email" value="<%= @user.email %>">
+        <div class = "new_userform-input">  <input name="email" value="<%= @user.email %>"> </div>
+      <div class="new_userform-error">  <%if @noemail %> <%=@noemail%> <% end %> </div>
           <p>パスワード</p>
-          <input type="password" name="password" value="<%= @user.password %>">
-          <input type="submit" value="新規登録">
+        <div class = "new_userform-input">  <input type="password" name="password" value="<%= @user.password %>"> </div>
+      <div class="new_userform-error">  <%if @nopassword %> <%=@nopassword%> <% end %> </div>
+        <div class = "new_userform-input">  <input type="submit" value="新規登録"> </div>
         <% end %>
 
       </div>
+    </div>
     </div>
   </div>
 </div>

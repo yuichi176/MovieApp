@@ -120,23 +120,23 @@ table td.icon.bird{
 }
 .ef {
 	border: 0;
-	border-bottom: 1px solid #1b2538;
+	border-bottom: 1px solid #dcdcdc;
 	background-color: transparent;
 }
-.ef ~ .focus_line {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-	transition: 0.4s;
-	background-color: #3ecdc6;
-}
-.ef:focus ~ .focus_line,
-.cp_iptxt.ef ~ .focus_line {
-	width: 100%;
-	transition: 0.4s;
-}
+//.ef ~ .focus_line {
+//	position: absolute;
+//	bottom: 0;
+//	left: 0;
+//	width: 0;
+//	height: 1px;
+//	transition: 0.4s;
+//	background-color: black;
+//}
+//.ef:focus ~ .focus_line,
+//.cp_iptxt.ef ~ .focus_line {
+//	width: 100%;
+//	transition: 0.4s;
+//}
 
 /* 追加ボタン ================================ */
 .add_btn input{

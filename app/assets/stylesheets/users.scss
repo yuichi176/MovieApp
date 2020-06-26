@@ -13,7 +13,7 @@
 /* users/show ================================ */
 .user-show {
   text-align: center;
-  padding-top:80px;
+  padding-top:60px;
 }
 
 .user {
@@ -31,16 +31,27 @@
   margin-bottom: 15px;
 }
 
+.edit_btn{
+  padding-bottom: 20px;
+}
 /* users/new ================================ */
 .users-form input {
   margin-bottom: 15px;
 }
 
 /* users/login_form ================================ */
+.login_form-box{
+  padding: 10px;
+  background: #FFF;
+  border: solid 1px #dcdcdc;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
 .loginform-heading{
+  text-align: center;
   font-weight: 300;
-  margin: 60px 0 0;
-  font-size: 48px;
+  margin: 50px 0 0;
+  font-size: 40px;
   color: #000000;
 }
 
@@ -49,17 +60,22 @@
 }
 
 .loginform-body p{
+ text-align: center;
  padding: 30px 0px 0px 0px;
 }
 
+.login_form-input{
+  text-align : center ;
+}
+
 .loginform input {
-  width: 100%;
+  width: 60%;
   border: 1px solid #d8dadf;
   padding: 10px;
   color: #57575f;
   font-size: 16px;
   letter-spacing: 2px;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: white;
 }
 
@@ -69,18 +85,30 @@
   cursor: pointer;
   font-weight: 300;
   width: 120px;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-top: 8px;
   margin-bottom: 0;
-  float: right;
-  margin: 20px 0 0 0;
+  margin: 30px 0 20px 0;
 }
 
-/* users/login_form ================================ */
+.login_form-error{
+  text-align : center ;
+  color: red;
+}
+
+/* users/new_userform ================================ */
+.new_userform-box{
+  padding: 10px;
+  background: #FFF;
+  border: solid 1px #dcdcdc;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
 .new_userform-heading{
+  text-align: center;
   font-weight: 300;
-  margin: 60px 0 0;
-  font-size: 48px;
+  margin: 50px 0 0;
+  font-size: 30px;
   color: #000000;
 }
 
@@ -89,17 +117,23 @@
 }
 
 .new_userform-body p{
- padding: 30px 0px 0px 0px;
+ text-align: center;
+ font-size: 15px;
+ padding: 25px 0px 0px 0px;
+}
+
+.new_userform-input{
+  text-align : center ;
 }
 
 .new_userform input {
-  width: 100%;
+  width: 60%;
   border: 1px solid #d8dadf;
   padding: 10px;
   color: #57575f;
   font-size: 16px;
   letter-spacing: 2px;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: white;
 }
 
@@ -109,9 +143,13 @@
   cursor: pointer;
   font-weight: 300;
   width: 120px;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-top: 8px;
   margin-bottom: 0;
-  float: right;
-  margin: 20px 0 0 0;
+  margin: 30px 0 20px 0;
+}
+
+.new_userform-error{
+  text-align : center ;
+  color: red;
 }
