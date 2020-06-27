@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     )
 
     if @user.save
-      flash[:notice] = "ユーザー登録が完了しました"
+      flash[:notice] = "アカウント登録が完了しました"
       session[:user_id]=@user.id
       redirect_to("/users/#{@user.id}")
     else
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
     if @user.save
-      flash[:notice] = "ユーザー情報を編集しました"
+      flash[:notice] = "アカウント情報を編集しました"
       redirect_to("/users/#{@user.id}")
     else
       render("users/edit")

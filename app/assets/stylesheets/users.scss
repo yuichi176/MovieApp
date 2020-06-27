@@ -4,35 +4,52 @@
 
 /* users/index ================================ */
 .users-heading {
+  text-align: center;
   font-weight: 300;
   margin: 60px 0 20px;
-  font-size: 48px;
+  font-size: 30px;
   color: #000000;
 }
 
 /* users/show ================================ */
 .user-show {
   text-align: center;
-  padding-top:60px;
+  padding-top:10px;
 }
 
 .user {
   margin-bottom: 20px;
 }
 
+.user_prof{
+  padding: 10px 10px 20px 10px;
+  margin:0 120px 20px;
+  background: #FFF;
+  border: solid 1px #dcdcdc;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
 .user h2 {
-  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 2px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .user p {
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 15px;
 }
 
 .edit_btn{
-  padding-bottom: 20px;
+  font-size: 12px;
+  color: #808080;
+}
+
+.sum_movies{
+  padding-bottom: 10px;
+  font-size: 15px;
 }
 /* users/new ================================ */
 .users-form input {
@@ -150,6 +167,63 @@
 }
 
 .new_userform-error{
+  text-align : center ;
+  color: red;
+}
+
+/* users/edit ================================ */
+.edit_userform-box{
+  padding: 10px;
+  background: #FFF;
+  border: solid 1px #dcdcdc;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+.edit_userform-heading{
+  text-align: center;
+  font-weight: 300;
+  margin: 20px 0 0;
+  font-size: 30px;
+  color: #000000;
+}
+
+.edit_userform-body {
+  padding: 20px;
+}
+
+.edit_userform p{
+ text-align: center;
+ padding: 20px 0px 0px 0px;
+}
+
+.edit_userform-input{
+  text-align : center ;
+}
+
+.edit_userform input {
+  width: 60%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.edit_userform input[type="submit"] {
+  background-color: #3ecdc6;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin: 30px 0 20px 0;
+}
+
+.edit_userform-error{
   text-align : center ;
   color: red;
 }

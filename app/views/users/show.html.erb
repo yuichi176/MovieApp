@@ -1,12 +1,17 @@
 <div class="main user-show">
   <div class="container">
     <div class="user">
-      <h2><%=@user.name %></h2>
-      <p><%=@user.email %></p>
 
-      <% if @user.id == @current_user.id %>
-      <div class="edit_btn">  <%= link_to("編集", "/users/#{@user.id}/edit") %> </div>
-      <% end %>
+      <div class="user_prof">
+        <h2><%=@user.name %></h2>
+        <% if @user.id == @current_user.id %>
+          <p><%=@user.email %></p>
+        <% end %>
+          <div class = "sum_movies"> 見た映画: <%= @user.movies.count %> 本 </div>
+        <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit",{class: "edit_btn"}) %>
+        <% end %>
+      </div>
 
         <table>
           <tr>

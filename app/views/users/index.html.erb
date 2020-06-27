@@ -4,15 +4,13 @@
     <table>
       <tr>
         <th>ユーザ名</th>
-        <th>email</th>
-        <th>パスワード</th>
+        <th>見た映画</th>
       </tr>
 
       <% @users.each do |user| %>
       <tr class = "main_table" onclick= 'window.location=" <%= "/users/#{user.id}" %>"'>
         <td><%= user.name %> </td>
-        <td><%= user.email %> </td>
-        <td><%= user.password %></td>
+        <td> <%= user.movies.count %> 本 </td>
       </tr>
       <% end %>
 
