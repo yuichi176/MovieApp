@@ -1,12 +1,15 @@
 <div class="main movie-new">
   <div class="container">
     <h1 class="form-heading">映画の追加</h1>
+    
+    <div class="new_movieform-error">  <%if @notitle %> <%= @notitle %> <% end %> </div>
+    <div class="new_movieform-error">  <%if @norating %> <%= @norating %> <% end %> </div>
 
     <%= form_tag("/movie/create") do %>
     <table>
       <tr>
         <th>タイトル</th>
-        <th>コメント</th>
+        <th>コメント(任意)</th>
         <th>評価</th>
       </tr>
 

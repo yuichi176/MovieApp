@@ -138,6 +138,16 @@ table td.icon.bird{
 //	transition: 0.4s;
 //}
 
+.new_movieform-error{
+  text-align : center ;
+  color: red;
+}
+
+.edit_movieform-error{
+  text-align : center ;
+  color: red;
+}
+
 /* 追加ボタン ================================ */
 .add_btn input{
   display: inline-block;

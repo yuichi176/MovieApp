@@ -24,6 +24,12 @@ class MovieController < ApplicationController
       flash[:notice] = "編集しました"
       redirect_to("/movie/#{@current_user.id}/index")
     else
+      if(@movie.title=="")
+        @notitle="タイトルを入力してください"
+      end
+      if(!@movie.rating)
+        @norating="評価を入力してください"
+      end
       render("movie/edit")
     end
   end
@@ -51,11 +57,16 @@ class MovieController < ApplicationController
     now = Date.today
     add_date = "#{now.year}/#{now.month}/#{now.day}"
     @movie.add_date = add_date
-
     if @movie.save
       flash[:notice] = "追加しました"
       redirect_to("/movie/#{@current_user.id}/index")
     else
+      if(@movie.title=="")
+        @notitle="タイトルを入力してください"
+      end
+      if(!@movie.rating)
+        @norating="評価を入力してください"
+      end
       render("movie/new")
     end
   end

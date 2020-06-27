@@ -2,6 +2,10 @@
   <div class="container">
     <h1 class="form-heading">映画の編集</h1>
 
+    <div class="edit_movieform-error">  <%if @notitle %> <%= @notitle %> <% end %> </div>
+    <div class="edit_movieform-error">  <%if @norating %> <%= @norating %> <% end %> </div>
+
+
   <%= form_tag("/movie/#{@movie.id}/update") do %>
 <table>
   <tr>
