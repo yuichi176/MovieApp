@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_151934) do
+ActiveRecord::Schema.define(version: 2020_06_27_154722) do
 
   create_table "movies", force: :cascade do |t|
     t.text "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_151934) do
     t.datetime "updated_at", null: false
     t.string "email"
     t.string "password_digest"
+    t.integer "sum_movies"
   end
 
 end

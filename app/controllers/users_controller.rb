@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit,:update]}
 
   def index
-    @users = User.all.order(created_at: :desc)
+    @users = User.all.order(sum_movies: :desc)
   end
 
   def show
@@ -19,7 +19,8 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      password: params[:password]
+      password: params[:password],
+      sum_movies: 0
     )
 
     if @user.save

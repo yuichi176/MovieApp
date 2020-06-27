@@ -36,6 +36,9 @@ class MovieController < ApplicationController
 
   def destroy
     @movie = Movie.find_by(id: params[:id])
+    #usersテーブルのsum_moviesを更新
+    @user = @movie.user
+    @user.declement_count_movie
     @movie.destroy
     flash[:notice] = "削除しました"
     redirect_to("/movie/#{@current_user.id}/index")
@@ -57,7 +60,11 @@ class MovieController < ApplicationController
     now = Date.today
     add_date = "#{now.year}/#{now.month}/#{now.day}"
     @movie.add_date = add_date
+
     if @movie.save
+      #usersテーブルのsum_moviesを更新
+      @user = @movie.user
+      @user.inclement_count_movie
       flash[:notice] = "追加しました"
       redirect_to("/movie/#{@current_user.id}/index")
     else
