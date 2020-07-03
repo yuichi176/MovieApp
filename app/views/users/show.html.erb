@@ -7,10 +7,11 @@
         <% if @user.id == @current_user.id %>
           <p><%=@user.email %></p>
         <% end %>
-          <div class = "sum_movies"> 見た映画: <%= @user.sum_movies %> 本 </div>
         <% if @user.id == @current_user.id %>
         <%= link_to("編集", "/users/#{@user.id}/edit",{class: "edit_btn"}) %>
         <% end %>
+          <div class = "sum_movies"> 見た映画: <%= @user.sum_movies %> 本 </div>
+
       </div>
 
         <table>

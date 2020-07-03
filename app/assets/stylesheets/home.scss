@@ -269,11 +269,16 @@ body {
 
 .main {
   position: absolute;
-  top: 64px;
+  top: 50px;
   width: 100%;
   height: auto;
   min-height: 100%;
   background-color: #fff5ee;
+}
+
+.main h1{
+  font-size: 150%;
+  padding-left: 15px;
 }
 
 .container {
@@ -323,7 +328,7 @@ header {
 .header-menus a {
   float: left;
   padding-top:10px;
-  font-size: 8px;
+  font-size: 9px;
   color: #808080;
 }
 
@@ -347,7 +352,7 @@ header {
 
 /* top ================================ */
 .top-main {
-  padding: 200px 0 100px;
+  padding: 150px 0 100px;
   text-align: center;
   position: absolute;
   top: 0;
@@ -368,7 +373,7 @@ header {
 }
 
 .top-main h2 {
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
@@ -376,7 +381,7 @@ header {
 }
 
 .top-main p {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* about ================================ */

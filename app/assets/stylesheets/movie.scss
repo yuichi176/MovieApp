@@ -25,6 +25,7 @@ table th,table td{
   text-align: center;
   width: 25%;
   padding: 15px 0;
+  font-size: 12px;
 }
 
 table td.icon{
@@ -118,6 +119,7 @@ table td.icon.bird{
 	box-sizing: border-box;
 	width: 100%;
 	letter-spacing: 1px;
+  font-size: 12px;
 }
 .cp_iptxt input[type='text']:focus {
 	outline: none;
@@ -221,7 +223,8 @@ table tr{
 
 table th,table td{
   text-align: center;
-  width: 25%;
+  font-size: 8px;
+  width: 20%;
   padding: 15px 0;
 }
 
@@ -296,12 +299,13 @@ table td.icon.bird{
 }
 
 /* movie/new ================================ */
+
 .movie-new textarea {
   resize: none;
 }
 
 .movie-new textarea::-webkit-input-placeholder {
-  font-size: 24px;
+  font-size: 20px;
   opacity: 0.5;
 }
 
@@ -316,6 +320,7 @@ table td.icon.bird{
 	box-sizing: border-box;
 	width: 100%;
 	letter-spacing: 1px;
+  font-size: 8px;
 }
 .cp_iptxt input[type='text']:focus {
 	outline: none;
