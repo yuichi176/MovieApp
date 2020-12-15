@@ -104,15 +104,19 @@
 }
 
 .loginform input[type="submit"] {
-  background-color: #3ecdc6;
+  background-color: #ffbe49;
   color: white;
   cursor: pointer;
   font-weight: 300;
   width: 120px;
-  border-radius: 3px;
+  border-radius: 7px;
   margin-top: 8px;
   margin-bottom: 0;
   margin: 30px 0 20px 0;
+}
+
+.loginform input[type="submit"]:hover{
+  background-color: #fad692;
 }
 
 .login_form-error{
@@ -163,15 +167,19 @@
 }
 
 .new_userform input[type="submit"] {
-  background-color: #3ecdc6;
+  background-color: #ffbe49;
   color: white;
   cursor: pointer;
   font-weight: 300;
   width: 120px;
-  border-radius: 3px;
+  border-radius: 7px;
   margin-top: 8px;
   margin-bottom: 0;
   margin: 30px 0 20px 0;
+}
+
+.new_userform input[type="submit"]:hover{
+  background-color: #fad692;
 }
 
 .new_userform-error{
@@ -220,15 +228,19 @@
 }
 
 .edit_userform input[type="submit"] {
-  background-color: #3ecdc6;
+  background-color: #ffbe49;
   color: white;
   cursor: pointer;
   font-weight: 300;
   width: 120px;
-  border-radius: 3px;
+  border-radius: 7px;
   margin-top: 8px;
   margin-bottom: 0;
   margin: 30px 0 20px 0;
+}
+
+.edit_userform input[type="submit"]:hover{
+  background-color: #fad692;
 }
 
 .edit_userform-error{
@@ -330,7 +342,7 @@
 
 .loginform input {
   width: 80%;
-  border: 1px solid #d8dadf;
+  border: 2px solid #d8dadf;
   padding: 10px;
   color: #57575f;
   font-size: 10px;
@@ -349,7 +361,7 @@
    text-align:center;
    margin: 30px 0 20px 0;
    color:#fff;
-   background-color:#3ecdc6;
+   background-color:#ffbe49;
 }
 
 .login_form-error{
@@ -410,7 +422,7 @@
   text-align:center;
   margin: 30px 0 20px 0;
   color:#fff;
-  background-color:#3ecdc6;
+  background-color:#ffbe49;
 }
 
 .new_userform-error{
@@ -470,7 +482,7 @@
   text-align:center;
   margin: 30px 0 20px 0;
   color:#fff;
-  background-color:#3ecdc6;
+  background-color:#ffbe49;
 }
 
 .edit_userform-error{
