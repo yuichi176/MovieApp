@@ -41,7 +41,6 @@
 
 .user p {
   font-size: 15px;
-  margin-bottom: 5px;
 }
 
 .edit_btn{
@@ -49,8 +48,12 @@
   color: #808080;
 }
 
+.edit_btn:hover{
+  color: #000000;
+}
+
 .sum_movies{
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 10px;
   font-size: 15px;
 }

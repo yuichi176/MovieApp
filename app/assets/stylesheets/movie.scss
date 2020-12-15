@@ -44,6 +44,10 @@ table td.icon.bird{
   padding: 15px 30px;
 }
 
+.plus:hover{
+  color: #c0c0c0;
+}
+
 /* movie/show ================================ */
 .movie-show form {
   display: inline;
@@ -155,15 +159,24 @@ table td.icon.bird{
 }
 
 /* 追加ボタン ================================ */
+.add_btn{
+  text-align: center;
+  margin-right: 5px;
+
+}
+
 .add_btn input{
   display: inline-block;
   margin: 10px;
-  padding :5px 10px;
+  padding :5px 20px;
   text-decoration: none;
-  background: #3ecdc6;/*ボタン色*/
+  background: #ffbe49;/*ボタン色*/
   color: #FFF;
   border-radius: 3px;
-  float: right;
+}
+
+.add_btn input:hover{
+  background: #fad692
 }
 
 /* 評価ボタン（星） ================================ */
@@ -356,15 +369,24 @@ table td.icon.bird{
 }
 
 /* 追加ボタン ================================ */
+.add_btn{
+  text-align: center;
+  margin-right: 5px;
+
+}
+
 .add_btn input{
   display: inline-block;
   margin: 10px;
-  padding :5px 10px;
+  padding :5px 20px;
   text-decoration: none;
-  background: #3ecdc6;/*ボタン色*/
+  background: #ffbe49;/*ボタン色*/
   color: #FFF;
   border-radius: 3px;
-  float: right;
+}
+
+.add_btn input:hover{
+  background: #fad692
 }
 
 /* 評価ボタン（星） ================================ */
